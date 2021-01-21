@@ -36,6 +36,7 @@ namespace DreamJoy_Calc
             this.btnForm3 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -76,7 +77,7 @@ namespace DreamJoy_Calc
             this.btnForm2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Maroon;
             this.btnForm2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnForm2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnForm2.Location = new System.Drawing.Point(51, 194);
+            this.btnForm2.Location = new System.Drawing.Point(51, 155);
             this.btnForm2.Margin = new System.Windows.Forms.Padding(2);
             this.btnForm2.Name = "btnForm2";
             this.btnForm2.Size = new System.Drawing.Size(111, 45);
@@ -93,7 +94,7 @@ namespace DreamJoy_Calc
             this.btnForm3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Maroon;
             this.btnForm3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnForm3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnForm3.Location = new System.Drawing.Point(51, 313);
+            this.btnForm3.Location = new System.Drawing.Point(51, 235);
             this.btnForm3.Margin = new System.Windows.Forms.Padding(2);
             this.btnForm3.Name = "btnForm3";
             this.btnForm3.Size = new System.Drawing.Size(111, 42);
@@ -126,12 +127,30 @@ namespace DreamJoy_Calc
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             // 
+            // button2
+            // 
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Maroon;
+            this.button2.FlatAppearance.BorderSize = 3;
+            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Maroon;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button2.Location = new System.Drawing.Point(51, 312);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(111, 42);
+            this.button2.TabIndex = 6;
+            this.button2.Text = "Subscriber";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlText;
             this.ClientSize = new System.Drawing.Size(823, 464);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnForm3);
@@ -156,5 +175,6 @@ namespace DreamJoy_Calc
         private System.Windows.Forms.Button btnForm3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button button2;
     }
 }
