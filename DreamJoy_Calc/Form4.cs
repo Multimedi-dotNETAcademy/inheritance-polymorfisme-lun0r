@@ -11,7 +11,7 @@ namespace DreamJoy_Calc
     public partial class Form4 : Form
     {
         Subscriber user;
-        List<Notification> notifications = new List<Notification>();
+        List<INotification> notifications = new List<INotification>();
         public Form4()
         {
             InitializeComponent();
@@ -34,6 +34,8 @@ namespace DreamJoy_Calc
 
         private void btnSendNotification_Click(object sender, EventArgs e)
         {
+
+            notifications.Clear();
             if (CBEmail.Checked)
             {
                 notifications.Add(new Email());
@@ -46,7 +48,7 @@ namespace DreamJoy_Calc
             {
                 notifications.Add(new Popup());
             }
-            foreach (Notification notification in notifications)
+            foreach (INotification notification in notifications)
             {
                 notification.Send(textBoxMessage.Text);
             }

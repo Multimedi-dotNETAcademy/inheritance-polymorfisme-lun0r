@@ -7,9 +7,9 @@ namespace DreamJoy_Calc
     class Subscriber
     {
         public string Name { get; set; }
-        public List<Notification> _notifications;
+        public List<INotification> _notifications;
 
-        public Subscriber(List<Notification> notification, string name)
+        public Subscriber(List<INotification> notification, string name)
         {
             Name = name;
             _notifications = notification;

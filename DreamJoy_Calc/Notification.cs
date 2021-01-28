@@ -5,33 +5,33 @@ using System.Windows.Forms;
 
 namespace DreamJoy_Calc
 {
-    abstract class Notification
+    interface INotification
     {
         
       
-        public abstract void Send(string messageContent);
+         void Send(string messageContent);
 
     }
 
-    class Email : Notification
+    class Email : INotification
     {
      
-        public override void Send(string messageContent)
+        public void Send(string messageContent)
         {
             MessageBox.Show($"Sending out an email: \n{messageContent}");
         }
     }
-    class SMS : Notification
+    class SMS : INotification
     {
       
-        public override void Send(string messageContent)
+        public void Send(string messageContent)
         {
             MessageBox.Show($"Sending out an SMS: \n{messageContent}");
         }
     }
-    class Popup : Notification
+    class Popup : INotification
     {
-        public override void Send(string messageContent)
+        public void Send(string messageContent)
         {
             MessageBox.Show($"popup: \n{messageContent}");
         }
